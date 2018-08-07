@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <Button
+            android:id="@+id/bt_scan_file"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="文件扫描"/>
+        <Button
+            android:id="@+id/bt_reveal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="揭露动画"/>
+        <Button
+            android:id="@+id/bt_xfermode_demo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAllCaps="false"
+            android:text="官方xfermode demo"/>
+        <Button
+            android:id="@+id/bt_xfermode_test"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textAllCaps="false"
+            android:text="xfermode 测试"/>
+        <Button
+            android:id="@+id/bt_wifi"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="wifi p2p"/>
+        <Button
+            android:id="@+id/bt_layout_manager"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="自定义layout manager"/>
+        <Button
+            android:id="@+id/bt_database"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="数据库"/>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
