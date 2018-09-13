@@ -45,5 +45,20 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="数据库"/>
+        <Button
+            android:id="@+id/bt_mesh"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="图片扭曲"/>
+        <Button
+            android:id="@+id/bt_fastjson"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="fastjson"/>
+        <Button
+            android:id="@+id/bt_ad"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="广告"/>
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>
