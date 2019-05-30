@@ -14,8 +14,9 @@ import android.graphics.RectF;
 import android.graphics.Shader;
 import android.graphics.Xfermode;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class sampleActivity extends AppCompatActivity {
     // create a bitmap with a circle, used for the "dst" image
@@ -107,12 +108,7 @@ public class sampleActivity extends AppCompatActivity {
                 paint.setShader(mBG);
                 canvas.drawRect(x, y, x + W, y + H, paint);
                 // draw the src/dst example into our offscreen bitmap
-                @SuppressLint("WrongConstant") int sc = canvas.saveLayer(x, y, x + W, y + H, null,
-                        Canvas.MATRIX_SAVE_FLAG |
-                                Canvas.CLIP_SAVE_FLAG |
-                                Canvas.HAS_ALPHA_LAYER_SAVE_FLAG |
-                                Canvas.FULL_COLOR_LAYER_SAVE_FLAG |
-                                Canvas.CLIP_TO_LAYER_SAVE_FLAG);
+                @SuppressLint("WrongConstant") int sc = canvas.saveLayer(x, y, x + W, y + H, null, Canvas.ALL_SAVE_FLAG);
                 canvas.translate(x, y);
                 canvas.drawBitmap(mDstB, 0, 0, paint);
                 paint.setXfermode(sModes[i]);

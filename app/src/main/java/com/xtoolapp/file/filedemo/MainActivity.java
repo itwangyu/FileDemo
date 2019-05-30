@@ -2,8 +2,9 @@ package com.xtoolapp.file.filedemo;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.xtoolapp.file.filedemo.bitmapmesh.MeshActivity;
 import com.xtoolapp.file.filedemo.database.DataBaseActivity;
@@ -31,21 +32,10 @@ public class MainActivity extends AppCompatActivity {
 
         startService(new Intent(MainActivity.this, ForegroundService.class));
     }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-//        Timer timer = new Timer();
-//        timer.schedule(new TimerTask() {
-//            @Override
-//            public void run() {
-//                startService(new Intent(MainActivity.this, ForegroundService.class));
-//            }
-//        },5000);
-    }
 
     @OnClick({R.id.bt_scan_file, R.id.bt_reveal, R.id.bt_xfermode_demo, R.id.bt_xfermode_test,
     R.id.bt_wifi,R.id.bt_layout_manager,R.id.bt_database,R.id.bt_mesh,
-    R.id.bt_fastjson,R.id.bt_ad})
+    R.id.bt_fastjson,R.id.bt_vm})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.bt_scan_file:
@@ -75,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.bt_fastjson:
                 startActivity(new Intent(this, FastJsonActivity.class));
                 break;
-            case R.id.bt_ad:
+            case R.id.bt_vm:
                 break;
         }
     }
