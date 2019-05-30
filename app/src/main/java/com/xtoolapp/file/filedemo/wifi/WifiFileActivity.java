@@ -6,31 +6,26 @@ import android.net.wifi.p2p.WifiP2pDevice;
 import android.net.wifi.p2p.WifiP2pInfo;
 import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.xtoolapp.file.filedemo.R;
 
 import java.util.Collection;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * Created by WangYu on 2018/6/4.
  */
 public class WifiFileActivity extends AppCompatActivity {
 
-    @BindView(R.id.tv_mine)
     TextView tvMine;
-    @BindView(R.id.tv_wifi_status)
     TextView tvWifiStatus;
-    @BindView(R.id.recycler_view)
     RecyclerView recyclerView;
     private WifiP2pManager mWifiP2pManager;
     private static String TAG = "wangyu";
@@ -43,7 +38,9 @@ public class WifiFileActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wifi_file);
-        ButterKnife.bind(this);
+        tvMine = findViewById(R.id.tv_mine);
+        tvWifiStatus = findViewById(R.id.tv_wifi_status);
+        recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         mAdapter = new DeviceListAdapter();
         mAdapter.setOnItemClickListener(new ItemClickListener() {

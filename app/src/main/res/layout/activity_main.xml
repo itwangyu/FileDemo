@@ -71,5 +71,17 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="mvvm." />
+        <Button
+            android:id="@+id/bt_feature1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="feature1" />
+
+        <Button
+            android:id="@+id/bt_feature2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="feature2" />
+
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

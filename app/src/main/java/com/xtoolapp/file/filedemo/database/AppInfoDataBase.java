@@ -21,7 +21,7 @@ public class AppInfoDataBase extends SQLiteOpenHelper {
     }
 
     public AppInfoDataBase() {
-        super(MyApplication.context, "db_app", null, VALUE_INT_VERSION_CODE);
+        super(MyApplication.Companion.getContext(), "db_app", null, VALUE_INT_VERSION_CODE);
     }
 
     @Override

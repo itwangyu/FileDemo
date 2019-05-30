@@ -1,0 +1,26 @@
+apply plugin: 'com.android.dynamic-feature'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 26
+//        versionCode 1
+//        versionName "1.0"
+
+    }
+
+//    release {
+//        // You must use the following property to specify additional ProGuard
+//        // rules for dynamic feature modules.
+//        proguardFiles 'proguard-rules-dynamic-features.pro'
+//    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':app')
+}

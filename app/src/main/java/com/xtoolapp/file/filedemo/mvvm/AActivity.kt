@@ -11,13 +11,13 @@ import com.xtoolapp.file.filedemo.ext.getViewModel
  */
 class AActivity : AppCompatActivity() {
 
-    val mViewMoel:AViewModel by lazy { getViewModel(AViewModel::class.java) }
+    private val mViewModel: AViewModel by lazy { getViewModel(AViewModel::class.java) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mv)
-        mViewMoel.stringData.postValue("这是来自AActivity的改变")
-        mViewMoel.intData.observe(this, Observer {  })
+        mViewModel.stringData.postValue("这是来自AActivity的改变")
+        mViewModel.intData.observe(this, Observer { })
     }
 }
 

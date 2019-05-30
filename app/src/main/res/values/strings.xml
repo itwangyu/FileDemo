@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">YuDemo</string>
+    <string name="title_feature1">Feature1</string>
+    <string name="title_feature2">Freature2</string>
+    <string name="title_feature3">Feature3</string>
 </resources>

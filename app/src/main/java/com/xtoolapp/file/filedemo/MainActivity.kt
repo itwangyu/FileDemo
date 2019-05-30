@@ -3,6 +3,8 @@ package com.xtoolapp.file.filedemo
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.play.core.splitinstall.SplitInstallManager
+import com.google.android.play.core.splitinstall.SplitInstallManagerFactory
 import com.xtoolapp.file.filedemo.bitmapmesh.MeshActivity
 import com.xtoolapp.file.filedemo.database.DataBaseActivity
 import com.xtoolapp.file.filedemo.douyin.VideoTestActivity
@@ -22,7 +24,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-
+    private val manager: SplitInstallManager by lazy { SplitInstallManagerFactory.create(this) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -43,6 +45,18 @@ class MainActivity : AppCompatActivity() {
         bt_mesh.setOnClickListener { start(MeshActivity::class.java) }
         bt_fastjson.setOnClickListener { start(FastJsonActivity::class.java) }
         bt_vm.setOnClickListener { start(AActivity::class.java) }
+        bt_feature1.setOnClickListener {
+            if (manager.installedModules.contains("feature1")) {
+                Intent().setClassName(BuildConfig.APPLICATION_ID, "com.android.feature1.Feature1Activity")
+                        .also { startActivity(it) }
+            }
+        }
+        bt_feature2.setOnClickListener {
+            if (manager.installedModules.contains("feature2")) {
+                Intent().setClassName(BuildConfig.APPLICATION_ID, "com.android.feature2.Feature2Activity")
+                        .also { startActivity(it) }
+            }
+        }
     }
 
 }
