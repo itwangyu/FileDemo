@@ -70,6 +70,6 @@
             android:id="@+id/bt_vm"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="mvvm" />
+            android:text="mvvm." />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
