@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         startService(Intent(this@MainActivity, ForegroundService::class.java))
         setOnClickEvent()
         var viewModel = getViewModel(AViewModel::class.java)
-        logi(viewModel.toString())
+//        logi(viewModel.toString())
     }
 
     private fun setOnClickEvent() {

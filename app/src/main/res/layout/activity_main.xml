@@ -9,7 +9,11 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="20dp">
-
+        <Button
+            android:id="@+id/bt_paint"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="填色" />
         <Button
             android:id="@+id/bt_scan_file"
             android:layout_width="match_parent"
@@ -71,12 +75,6 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="mvvm" />
-
-        <Button
-            android:id="@+id/bt_paint"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="填色" />
 
         <Button
             android:id="@+id/bt_feature1"

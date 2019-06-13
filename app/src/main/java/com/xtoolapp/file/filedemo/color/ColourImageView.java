@@ -24,7 +24,7 @@ public class ColourImageView extends AppCompatImageView {
      */
     private int mBorderColor = 0xFF000000;
 
-    private boolean hasBorderColor = false;
+    private boolean hasBorderColor = true;
 
     private Stack<Point> mStacks = new Stack<Point>();
 
