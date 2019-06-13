@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.play.core.splitinstall.SplitInstallManager
 import com.google.android.play.core.splitinstall.SplitInstallManagerFactory
 import com.xtoolapp.file.filedemo.bitmapmesh.MeshActivity
+import com.xtoolapp.file.filedemo.color.PaintColorActivity
 import com.xtoolapp.file.filedemo.database.DataBaseActivity
 import com.xtoolapp.file.filedemo.douyin.VideoTestActivity
 import com.xtoolapp.file.filedemo.ext.getViewModel
@@ -45,10 +46,10 @@ class MainActivity : AppCompatActivity() {
         bt_mesh.setOnClickListener { start(MeshActivity::class.java) }
         bt_fastjson.setOnClickListener { start(FastJsonActivity::class.java) }
         bt_vm.setOnClickListener { start(AActivity::class.java) }
+        bt_paint.setOnClickListener { start(PaintColorActivity::class.java) }
         bt_feature1.setOnClickListener {
             if (manager.installedModules.contains("feature1")) {
-                Intent().setClassName(BuildConfig.APPLICATION_ID, "com.android.feature1.Feature1Activity")
-                        .also { startActivity(it) }
+                startActivity(Intent().setClassName(BuildConfig.APPLICATION_ID, "com.android.feature1.Feature1Activity"))
             }
         }
         bt_feature2.setOnClickListener {
