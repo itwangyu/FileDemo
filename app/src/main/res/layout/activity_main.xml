@@ -10,6 +10,11 @@
         android:orientation="vertical"
         android:padding="20dp">
         <Button
+            android:id="@+id/bt_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="滚动分发" />
+        <Button
             android:id="@+id/bt_paint"
             android:layout_width="match_parent"
             android:layout_height="50dp"

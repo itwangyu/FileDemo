@@ -89,7 +89,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".color.PaintColorActivity"></activity>
+        <activity
+            android:name=".scroll.ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".color.PaintColorActivity" />
         <activity android:name=".nestscroll.NestScrollActivity" />
         <activity android:name=".mvvm.AActivity" />
         <activity android:name=".MainActivity">

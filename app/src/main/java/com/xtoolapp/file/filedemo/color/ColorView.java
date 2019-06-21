@@ -44,6 +44,7 @@ public class ColorView extends View {
     private int[] mIndexArr;
     private int[] mPixelsArr;
     private Paint mTextPaint;
+    private Paint mBitmapPaint;
 
     public ColorView(Context context) {
         this(context, null);
@@ -55,10 +56,13 @@ public class ColorView extends View {
     }
 
     private void init() {
+        setBackgroundColor(Color.WHITE);
         mBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.image_007).copy(Bitmap.Config.RGB_565, true);
         mBitmap = Bitmap.createScaledBitmap(mBitmap, mBitmap.getWidth() * mScaleRate, mBitmap.getHeight() * mScaleRate, true);
         mTextPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mTextPaint.setColor(Color.BLACK);
+        mBitmapPaint = new Paint();
+        mBitmapPaint.setFilterBitmap(true);
         initData();
     }
 

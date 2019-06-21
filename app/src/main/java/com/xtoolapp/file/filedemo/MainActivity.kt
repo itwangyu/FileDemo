@@ -10,7 +10,6 @@ import com.xtoolapp.file.filedemo.color.PaintColorActivity
 import com.xtoolapp.file.filedemo.database.DataBaseActivity
 import com.xtoolapp.file.filedemo.douyin.VideoTestActivity
 import com.xtoolapp.file.filedemo.ext.getViewModel
-import com.xtoolapp.file.filedemo.ext.logi
 import com.xtoolapp.file.filedemo.ext.start
 import com.xtoolapp.file.filedemo.fastjson.FastJsonActivity
 import com.xtoolapp.file.filedemo.file.ScanFileActivity
@@ -18,6 +17,7 @@ import com.xtoolapp.file.filedemo.foregroundservice.ForegroundService
 import com.xtoolapp.file.filedemo.mvvm.AActivity
 import com.xtoolapp.file.filedemo.mvvm.AViewModel
 import com.xtoolapp.file.filedemo.rebeal.FirstActivity
+import com.xtoolapp.file.filedemo.scroll.ScrollingActivity
 import com.xtoolapp.file.filedemo.wifi.WifiFileActivity
 import com.xtoolapp.file.filedemo.xfermode.XfermodeActivity
 import com.xtoolapp.file.filedemo.xfermode.sampleActivity
@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setOnClickEvent() {
+        bt_scroll.setOnClickListener { start(ScrollingActivity::class.java) }
         bt_scan_file.setOnClickListener { start(ScanFileActivity::class.java) }
         bt_reveal.setOnClickListener { start(FirstActivity::class.java) }
         bt_xfermode_demo.setOnClickListener { start(sampleActivity::class.java) }
